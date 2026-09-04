@@ -9,8 +9,8 @@ app.use(express.json())
 app.post('/notes', async (req, res) => {
    const data = req.body // output => object {title,description}
    await noteModel.create({
-    title: data.title,
-    description: data.description
+    title: data.Title,
+    description: data.Description
    })
    res.status(201).json({
     message:"Note Created"
